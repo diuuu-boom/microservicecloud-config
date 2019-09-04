@@ -22,6 +22,11 @@ spring:
             initial-size: 5       # 初始化连接数
             max-total: 5          # 最大连接数 
             max-wait-millis: 200  # 等待连获取的最大时间
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml  # mybatis 配置文件所在的路径
+  type-aliases-package: indi.jsees.springcloud.domain # 所有 Entity 别名所在的包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                 # mapper映射文件
 
 eureka: 
   client: 
@@ -59,6 +64,12 @@ spring:
             initial-size: 5       # 初始化连接数
             max-total: 5          # 最大连接数 
             max-wait-millis: 200  # 等待连获取的最大时间
+            
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml  # mybatis 配置文件所在的路径
+  type-aliases-package: indi.jsees.springcloud.domain # 所有 Entity 别名所在的包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                 # mapper映射文件
 
 eureka: 
   client: 
